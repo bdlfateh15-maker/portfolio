@@ -1,0 +1,6 @@
+# Allow all web crawlers to access all content
+User-agent: *
+Allow: /
+
+# Location of the sitemap
+Sitemap: https://www.portfolio.com/sitemap.xml

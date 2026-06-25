@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FaDev | Fateh - Full-Stack Developer &amp; UI Architect</title>
+  <meta name="description" content="Explore the portfolio of Fateh, a skilled Full-Stack Developer &amp; UI Architect crafting custom web solutions with clean PHP, modern CSS, and dynamic JavaScript.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Zilla+Slab:wght@600;700&display=swap">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-new-gr-c-s-check-loaded="14.1304.0" data-gr-ext-installed="">
+
+<!-- NAVBAR -->
+<header class="nav">
+  <nav class="nav-inner" aria-label="Primary">
+    <a href="#" class="brand" aria-label="FaDev home">
+      <span class="brand-name">FaDev</span>
+    </a>
+    <div class="nav-pill">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <button class="btn-contact-animated" aria-label="Contact">
+      <div class="svg-wrapper-1">
+        <div class="svg-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+          </svg>
+        </div>
+      </div>
+      <span>Contact</span>
+    </button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<main id="home" class="hero">
+  <div class="hero-bg">
+    <picture>
+      <source srcset="https://images.pexels.com/photos/31650359/pexels-photo-31650359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260&fm=webp" type="image/webp">
+      <img src="https://images.pexels.com/photos/31650359/pexels-photo-31650359.jpeg" alt="Abstract purple and blue digital art background">
+    </picture>
+  </div>
+  <section class="hero-inner">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <p class="eyebrow">I'm Fateh.</p>
+        <h1 class="h1">
+          <span class="mask"><span class="l1">UI-Creator</span></span>
+          <span class="mask"><span class="l2">Developer</span></span>
+          <span class="mask"><span class="l3">Full-Stack</span></span>
+          <span class="mask"><span class="l4">Architect</span></span>
+        </h1>
+        <p class="lede">Crafting custom web sites with clean PHP, semantic HTML, modern CSS, dynamic JS, and optimized SQL databases.</p>
+        <div class="hero-cta-wrapper">
+          <button class="btn-contact-animated">
+            <div class="svg-wrapper-1">
+              <div class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                </svg>
+              </div>
+            </div>
+            <span>Contact</span>
+          </button>
+        </div>
+      </div>
+      <dl class="hero-stats stats">
+        <div class="stat" style="animation-delay:1.1s"><dt>+3</dt><dd>Years Of Experience</dd></div>
+        <div class="stat" style="animation-delay:1.25s"><dt>+15</dt><dd>Completed Projects</dd></div>
+        <div class="stat" style="animation-delay:1.4s"><dt>+12</dt><dd>Satisfied Clients</dd></div>
+      </dl>
+    </div>
+    <div class="features">
+      <article class="feature reveal-wave" style="animation-delay: 1.2s;">
+        <h2><span class="wave-item">Bespoke Architecture</span></h2>
+        <p><span class="wave-item" style="transition-delay: .1s">Crafting scalable web systems from scratch, free from bloated, off-the-shelf components.</span></p>
+      </article>
+      <article class="feature reveal-wave" style="animation-delay: 1.3s;">
+        <h2><span class="wave-item">Real-Time Data</span></h2>
+        <p><span class="wave-item" style="transition-delay: .1s">Developing high-performance applications for instant data delivery and live user interaction.</span></p>
+      </article>
+      <article class="feature reveal-wave" style="animation-delay: 1.4s;">
+        <h2><span class="wave-item">Security by Design</span></h2>
+        <p><span class="wave-item" style="transition-delay: .1s">Integrating robust, multi-layered security protocols to protect data and prevent threats.</span></p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="container">
+    <div class="about-top reveal fade in">
+      <div class="who">
+        <picture>
+          <source srcset="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940&fm=webp" type="image/webp">
+          <img class="avatar lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="A portrait of Fateh, Full-Stack Developer and UI Architect." loading="lazy">
+        </picture>
+        <span class="tag">Fateh</span>
+      </div>
+      <span class="tag muted">Full Stack Developer</span>
+    </div>
+
+    <div class="about-grid">
+      <div class="mosaic reveal left in">
+        <div class="mosaic-grid">
+          <div class="sq sq-1 reveal scale in" style="transition-delay:.25s"></div>
+          <div class="sq sq-2 reveal scale in" style="transition-delay:.35s"></div>
+          <div class="sq sq-3 reveal scale in" style="transition-delay:.5s"></div>
+          <div class="portrait reveal fade in" style="transition-delay:.1s">
+            <picture>
+              <source srcset="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940&fm=webp" type="image/webp">
+              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="Fateh, a professional full-stack developer, in a creative setting." loading="lazy">
+            </picture>
+            <div class="grid-lines"></div>
+          </div>
+        </div>
+        <div class="floating-sq reveal in" style="transition-delay:.6s">
+          <div class="a"></div><div class="b"></div>
+        </div>
+      </div>
+
+      <div class="copy">
+        <h2 class="reveal in">About <br> The Craft</h2>
+        <blockquote class="quote reveal in" style="transition-delay:.15s">"I go beyond the norm to craft every line of code with purpose. Software engineering is the foundation, but every project deserves a love letter."</blockquote>
+        <div class="two-col">
+          <p class="reveal in" style="transition-delay:.25s">I dedicate my mind to crafting every line of code you throw at me. Whether you need a simple, elegant website or a complex, mind-blowing application, it is all possible. Sit down, and let me build your next project.</p>
+          <div class="reveal in" style="transition-delay:.4s">
+            <h3>Code Philosophy</h3>
+            <p>Every line of code is written with intention. I believe that beautiful code leads to beautiful products. Clean, maintainable, and scalable solutions are not optional—they are the standard for high-quality development.</p>
+            <a href="about.html" class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGIES -->
+<section id="tech" class="tech">
+  <div class="tech-overlay"></div>
+  <div class="tech-content reveal-wave in">
+    <h2 class="wave-item">Modern Tech Stack,<br><span>Proven Results</span></h2>
+    <p class="wave-item" style="transition-delay: .2s">I leverage a modern tech stack including PHP, JavaScript, and SQL to build solid foundations. From fast frontends with semantic HTML/CSS to robust backends, every technology is chosen for optimal performance and long-term maintainability.</p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+  <div class="container">
+    <div class="projects-header reveal-wave in">
+      <div class="projects-title">
+        <span class="eyebrow-dark wave-item">_Project</span>
+        <h2 class="wave-item" style="transition-delay: .1s">Building Digital Experiences<br>that Deliver Results</h2>
+      </div>
+      <div class="filters wave-item" style="transition-delay: .2s">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="webflow">Web Flow</button>
+        <button class="filter-btn" data-filter="app">App Development</button>
+        <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
+        <button class="filter-btn" data-filter="brand">Brand Identity</button>
+      </div>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <a href="#" class="project-card reveal fade in" data-category="webflow" style="transition-delay: .2s">
+        <picture>
+          <source srcset="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp" type="image/webp">
+          <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Desktop computer displaying the TechFlow corporate website design." loading="lazy">
+        </picture>
+        <span class="project-tag">Web Flow</span>
+        <div class="project-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></div>
+        <div class="project-info">
+          <div class="project-info-top">
+            <h3>TechFlow Corporate Website</h3>
+            <span class="price">$750</span>
+          </div>
+          <div class="project-info-bot">
+            <span>Webflow</span>
+            <span>April 28, 2025</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 2 -->
+      <a href="#" class="project-card reveal fade in" data-category="uiux" style="transition-delay: .3s">
+        <picture>
+          <source srcset="https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp" type="image/webp">
+          <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A UI/UX design mockup for a creative audio interface dashboard." loading="lazy">
+        </picture>
+        <span class="project-tag">UI/UX Design</span>
+        <div class="project-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></div>
+        <div class="project-info">
+          <div class="project-info-top">
+            <h3>Audio Interface Dashboard</h3>
+            <span class="price">$1200</span>
+          </div>
+          <div class="project-info-bot">
+            <span>Figma / Prototyping</span>
+            <span>June 12, 2025</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 3 -->
+      <a href="#" class="project-card reveal fade in" data-category="app" style="transition-delay: .2s">
+        <picture>
+          <source srcset="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp" type="image/webp">
+          <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A developer's screen showing code for a fintech mobile application." loading="lazy">
+        </picture>
+        <span class="project-tag">App Development</span>
+        <div class="project-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></div>
+        <div class="project-info">
+          <div class="project-info-top">
+            <h3>Fintech Mobile App</h3>
+            <span class="price">$2500</span>
+          </div>
+          <div class="project-info-bot">
+            <span>React Native</span>
+            <span>August 05, 2025</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 4 -->
+      <a href="#" class="project-card reveal fade in" data-category="brand" style="transition-delay: .3s">
+        <picture>
+          <source srcset="https://images.pexels.com/photos/1337380/pexels-photo-1337380.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp" type="image/webp">
+          <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/1337380/pexels-photo-1337380.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A branding style guide for Lumina Coffee Co. on a desk." loading="lazy">
+        </picture>
+        <span class="project-tag">Brand Identity</span>
+        <div class="project-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></div>
+        <div class="project-info">
+          <div class="project-info-top">
+            <h3>Lumina Coffee Co.</h3>
+            <span class="price">$500</span>
+          </div>
+          <div class="project-info-bot">
+            <span>Brand Guidelines</span>
+            <span>September 18, 2025</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap" class="roadmap">
+  <div class="container">
+    <div class="roadmap-header reveal-wave in">
+      <span class="eyebrow-dark wave-item" style="display: block; margin-bottom: 0.5rem;">_Process</span>
+      <h2 class="wave-item" style="transition-delay: .1s">A Transparent Development Lifecycle</h2>
+    </div>
+
+    <div class="timeline-container">
+      <!-- Scroll progress lines -->
+      <div class="timeline-line-bg"></div>
+      <div class="timeline-line-progress" id="timeline-progress" style="height: 100%;"></div>
+
+      <!-- Item 1 -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <h3 class="timeline-date reveal left in">December</h3>
+        </div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-right">
+          <p class="reveal in">We begin with bundle optimization to reduce load times. Minifying assets, lazy loading images, and analyzing the critical rendering path are key first steps.</p>
+          <div class="view-action reveal in" style="transition-delay: .1s">
+            <button class="btn-explore">
+              <span class="explore-icon-wrap">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </span>
+              <span class="explore-text">Explore</span>
+              <span class="explore-hidden">Explore</span>
+            </button>
+          </div>
+          <picture>
+            <source srcset="https://images.pexels.com/photos/7374345/pexels-photo-7374345.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp" type="image/webp">
+            <img class="lazy reveal-right in" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/7374345/pexels-photo-7374345.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A whiteboard with a flowchart detailing a web development process." loading="lazy" style="transition-delay: .2s">
+          </picture>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <h3 class="timeline-date reveal left in">November</h3>
+        </div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-right">
+          <p class="reveal in">Security is paramount. We implement XSS prevention protocols across all input vectors, tightening sanitization rules and standardizing output escaping.</p>
+          <div class="view-action reveal in" style="transition-delay: .1s">
+             <button class="btn-explore">
+              <span class="explore-icon-wrap">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </span>
+              <span class="explore-text">Explore</span>
+              <span class="explore-hidden">Explore</span>
+            </button>
+          </div>
+          <picture>
+            <source srcset="https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp" type="image/webp">
+            <img class="lazy reveal-right in" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg?auto=compress&cs=tinysrgb&w=800" alt="UI/UX wireframe sketches for a mobile application on a desk." loading="lazy" style="transition-delay: .2s">
+          </picture>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <h3 class="timeline-date reveal left in">October</h3>
+        </div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-right">
+          <p class="reveal in">Efficient client-side validation is refactored to catch errors before server processing, significantly reducing the number of invalid API requests.</p>
+          <div class="view-action reveal in" style="transition-delay: .1s">
+             <button class="btn-explore">
+              <span class="explore-icon-wrap">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </span>
+              <span class="explore-text">Explore</span>
+              <span class="explore-hidden">Explore</span>
+            </button>
+          </div>
+          <picture>
+            <source srcset="https://images.pexels.com/photos/325527/pexels-photo-325527.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp" type="image/webp">
+            <img class="lazy reveal-right in" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/325527/pexels-photo-325527.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A collection of color swatches and design materials for branding." loading="lazy" style="transition-delay: .2s">
+          </picture>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <h3 class="timeline-date reveal left in">September</h3>
+        </div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-right">
+          <p class="reveal in">The application's state engine is rebuilt for predictability and testability, giving us full control over the application flow without external dependencies.</p>
+          <div class="view-action reveal in" style="transition-delay: .1s">
+            <button class="btn-explore">
+              <span class="explore-icon-wrap">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </span>
+              <span class="explore-text">Explore</span>
+              <span class="explore-hidden">Explore</span>
+            </button>
+          </div>
+          <picture>
+            <source srcset="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp" type="image/webp">
+            <img class="lazy reveal-right in" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A modern desktop computer setup displaying a user interface design." loading="lazy" style="transition-delay: .2s">
+          </picture>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <h3 class="timeline-date reveal left in">August</h3>
+        </div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-right">
+          <p class="reveal in">The initial architecture is established, building a solid foundation for scaling without compromise. Every system is designed for performance and longevity.</p>
+          <div class="view-action reveal in" style="transition-delay: .1s">
+            <button class="btn-explore">
+              <span class="explore-icon-wrap">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </span>
+              <span class="explore-text">Explore</span>
+              <span class="explore-hidden">Explore</span>
+            </button>
+          </div>
+          <picture>
+            <source srcset="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800&fm=webp" type="image/webp">
+            <img class="lazy reveal-right in" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A developer looking intently at complex code on a dark screen." loading="lazy" style="transition-delay: .2s">
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="roadmap-outro reveal fade in">
+      <span class="eyebrow-dark">Refined</span>
+      <h2>The work never stops improving</h2>
+      <p>Systems are living things. They need attention, refinement, and continuous optimization to stay fast and secure.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="testimonials-sec">
+  <div class="testimonials-sticky">
+    <div class="testimonials-header reveal-wave in">
+      <h2 class="wave-item" style="transition-delay: .1s">Trusted by Industry Leaders</h2>
+    </div>
+    
+    <div class="testimonials-track" id="testimonials-track" style="transform: translateX(-1081.34px);">
+      <!-- Card 1 -->
+      <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+          <meta itemprop="ratingValue" content="5">★★★★★
+        </div>
+        <p class="test-text" itemprop="reviewBody">"Fateh's team demonstrated exceptional creativity and professionalism. Their ability to combine PHP development with a keen eye for UI/UX design resulted in a strong and impactful brand presence for us."</p>
+        <div class="test-divider"></div>
+        <div class="test-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <div class="author-info">
+            <picture>
+              <source srcset="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=100&fm=webp" type="image/webp">
+              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Dianne Russell, a satisfied client." loading="lazy">
+            </picture>
+            <div class="author-text">
+              <h4 itemprop="name">Dianne Russell</h4>
+              <span itemprop="jobTitle">Nursing Assistant</span>
+            </div>
+          </div>
+          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="#D1D5DB"></path></svg></div>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+          <meta itemprop="ratingValue" content="5">★★★★★
+        </div>
+        <p class="test-text" itemprop="reviewBody">"The bespoke architecture they built for our platform is flawless. The clean code and optimized SQL database queries handle our real-time data needs without breaking a sweat. A truly professional developer."</p>
+        <div class="test-divider"></div>
+        <div class="test-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <div class="author-info">
+            <picture>
+              <source srcset="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=100&fm=webp" type="image/webp">
+              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Albert Flores, a satisfied client." loading="lazy">
+            </picture>
+            <div class="author-text">
+              <h4 itemprop="name">Albert Flores</h4>
+              <span itemprop="jobTitle">Product Manager</span>
+            </div>
+          </div>
+          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="#D1D5DB"></path></svg></div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+          <meta itemprop="ratingValue" content="5">★★★★★
+        </div>
+        <p class="test-text" itemprop="reviewBody">"I was blown away by their attention to detail in the frontend development. Every CSS animation is smooth, and the semantic HTML has dramatically improved our site's accessibility and SEO."</p>
+        <div class="test-divider"></div>
+        <div class="test-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <div class="author-info">
+            <picture>
+              <source srcset="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&fm=webp" type="image/webp">
+              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Leslie Alexander, a satisfied client." loading="lazy">
+            </picture>
+            <div class="author-text">
+              <h4 itemprop="name">Leslie Alexander</h4>
+              <span itemprop="jobTitle">CEO, TechNova</span>
+            </div>
+          </div>
+          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="#D1D5DB"></path></svg></div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+          <meta itemprop="ratingValue" content="5">★★★★★
+        </div>
+        <p class="test-text" itemprop="reviewBody">"Communication was top-notch. They didn't just write JS code; they helped shape our product strategy with technical insights that saved us months of rework. A true full-stack architect."</p>
+        <div class="test-divider"></div>
+        <div class="test-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <div class="author-info">
+            <picture>
+              <source srcset="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=100&fm=webp" type="image/webp">
+              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Cody Fisher, a satisfied client." loading="lazy">
+            </picture>
+            <div class="author-text">
+              <h4 itemprop="name">Cody Fisher</h4>
+              <span itemprop="jobTitle">Startup Founder</span>
+            </div>
+          </div>
+          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="#D1D5DB"></path></svg></div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+          <meta itemprop="ratingValue" content="5">★★★★★
+        </div>
+        <p class="test-text" itemprop="reviewBody">"A pleasure to work with. They took our outdated web presence and turned it into a dynamic, lightning-fast platform. Our user engagement metrics have skyrocketed thanks to their web development expertise."</p>
+        <div class="test-divider"></div>
+        <div class="test-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <div class="author-info">
+            <picture>
+              <source srcset="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=100&fm=webp" type="image/webp">
+              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Jane Cooper, a satisfied client." loading="lazy">
+            </picture>
+            <div class="author-text">
+              <h4 itemprop="name">Jane Cooper</h4>
+              <span itemprop="jobTitle">Marketing Director</span>
+            </div>
+          </div>
+          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="#D1D5DB"></path></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-16 px-4 sm:px-8" style="background-color: #f4f7fb;">
+    
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-sm font-medium tracking-wide text-gray-600 block mb-3">_Our services</span>
+            <h2 class="text-4xl md:text-5xl font-semibold leading-tight text-black">Creative Solutions For<br>Every Design Need</h2>
+        </div>
+
+        <div class="space-y-4" id="accordion-container">
+            <!-- Item 1: Web Development -->
+            <div class="accordion-item bg-white rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] overflow-hidden w-full transition-shadow duration-300">
+                <div class="accordion-header w-full flex items-center p-8 cursor-pointer transition-colors hover:bg-gray-50">
+                    <div class="icon-bg w-8 h-8 rounded-full flex items-center justify-center relative mr-5 shrink-0 transition-colors duration-300">
+                        <div class="icon-horizontal w-3 h-[1.5px] bg-black absolute"></div>
+                        <div class="icon-vertical h-3 w-[1.5px] bg-black absolute"></div>
+                    </div>
+                    <h3 class="text-2xl font-medium text-black">Web Development</h3>
+                </div>
+                <div class="accordion-content-wrapper">
+                    <div class="accordion-content">
+                        <div class="px-8 pb-8 pt-0 flex flex-col md:flex-row gap-8">
+                            <div class="flex-1">
+                                <p class="text-gray-700 leading-relaxed mb-6 max-w-md">Our team delivers robust, future-ready web experiences — clean code, seamless speed, zero compromise. Every module, page, and system is tailored.</p>
+                                <a href="#" class="inline-block text-black font-semibold text-sm border-b-2 border-black pb-0.5 hover:text-gray-600 hover:border-gray-600 transition-colors mb-8">Contact Us ↗</a>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">App Development</span>
+                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">Brand Identity</span>
+                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">UI/UX Design</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 w-full md:w-1/2">
+                                <picture>
+                                  <source srcset="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80&fm=webp" type="image/webp">
+                                  <img class="lazy w-1/2 h-48 object-cover rounded-lg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80" alt="A team of developers collaborating on a web development project." loading="lazy">
+                                </picture>
+                                <picture>
+                                  <source srcset="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80&fm=webp" type="image/webp">
+                                  <img class="lazy w-1/2 h-48 object-cover rounded-lg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="Close-up of clean PHP code on a dark-themed editor." loading="lazy">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2: UI/UX Design -->
+            <div class="accordion-item bg-white rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] overflow-hidden w-full transition-shadow duration-300">
+                <div class="accordion-header w-full flex items-center p-8 cursor-pointer transition-colors hover:bg-gray-50">
+                    <div class="icon-bg w-8 h-8 rounded-full flex items-center justify-center relative mr-5 shrink-0 transition-colors duration-300">
+                        <div class="icon-horizontal w-3 h-[1.5px] bg-black absolute"></div>
+                        <div class="icon-vertical h-3 w-[1.5px] bg-black absolute"></div>
+                    </div>
+                    <h3 class="text-2xl font-medium text-black">UI/UX Design</h3>
+                </div>
+                <div class="accordion-content-wrapper">
+                    <div class="accordion-content">
+                        <div class="px-8 pb-8 pt-0 flex flex-col md:flex-row gap-8">
+                            <div class="flex-1">
+                                <p class="text-gray-700 leading-relaxed mb-6 max-w-md">Our team designs immersive, human-centered experiences — clear journeys, elegant visuals, meaningful motion. Every wireframe, flow, and detail is refined.</p>
+                                <a href="#" class="inline-block text-black font-semibold text-sm border-b-2 border-black pb-0.5 hover:text-gray-600 hover:border-gray-600 transition-colors mb-8">Contact Us ↗</a>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">UI/UX Design</span>
+                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">App Development</span>
+                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">Brand Identity</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 w-full md:w-1/2">
+                                <picture>
+                                  <source srcset="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80&fm=webp" type="image/webp">
+                                  <img class="lazy w-1/2 h-48 object-cover rounded-lg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80" alt="A UI/UX designer sketching wireframes for a new mobile app." loading="lazy">
+                                </picture>
+                                <picture>
+                                  <source srcset="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80&fm=webp" type="image/webp">
+                                  <img class="lazy w-1/2 h-48 object-cover rounded-lg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="A screen displaying a colorful and modern user interface design." loading="lazy">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3: Website Reviews -->
+            <div class="accordion-item bg-white rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] overflow-hidden w-full transition-shadow duration-300">
+                <div class="accordion-header w-full flex items-center p-8 cursor-pointer transition-colors hover:bg-gray-50">
+                    <div class="icon-bg w-8 h-8 rounded-full flex items-center justify-center relative mr-5 shrink-0 transition-colors duration-300">
+                        <div class="icon-horizontal w-3 h-[1.5px] bg-black absolute"></div>
+                        <div class="icon-vertical h-3 w-[1.5px] bg-black absolute"></div>
+                    </div>
+                    <h3 class="text-2xl font-medium text-black">Website Reviews</h3>
+                </div>
+                <div class="accordion-content-wrapper">
+                    <div class="accordion-content">
+                        <div class="px-8 pb-8 pt-0 flex flex-col md:flex-row gap-8">
+                            <div class="flex-1">
+                                <p class="text-gray-700 leading-relaxed mb-6 max-w-md">We perform comprehensive audits to ensure your website performs at its peak. Our reviews cover usability, performance, and SEO best practices.</p>
+                                <a href="#" class="inline-block text-black font-semibold text-sm border-b-2 border-black pb-0.5 hover:text-gray-600 hover:border-gray-600 transition-colors mb-8">Schedule Audit ↗</a>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">Performance Audit</span>
+                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">SEO Review</span>
+                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">UX/UI Audit</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 w-full md:w-1/2">
+                                <picture>
+                                  <source srcset="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80&fm=webp" type="image/webp">
+                                  <img class="lazy w-1/2 h-48 object-cover rounded-lg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80" alt="A technical SEO audit report on a laptop screen." loading="lazy">
+                                </picture>
+                                <picture>
+                                  <source srcset="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80&fm=webp" type="image/webp">
+                                  <img class="lazy w-1/2 h-48 object-cover rounded-lg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="A graph showing website performance metrics improving over time." loading="lazy">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section id="faq" class="faq-sec">
+  <div class="faq-bg-img">
+    <!-- Updated FAQ Background -->
+    <picture>
+      <source srcset="https://images.pexels.com/photos/31622978/pexels-photo-31622978.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260&fm=webp" type="image/webp">
+      <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/31622978/pexels-photo-31622978.jpeg" alt="Abstract background with geometric shapes and soft light" loading="lazy">
+    </picture>
+  </div>
+
+  
+  <div class="faq-container reveal in" style="transition-delay: .2s">
+    <div class="faq-header-wrap">
+      <h2>4 Question That Might Useful for You</h2>
+      <p>Quick way to understand your immediate needs.</p>
+    </div>
+    
+    <div class="faq-grid">
+      <!-- Card 1 -->
+      <div class="faq-card faq-card-1">
+        <div class="faq-pin"></div>
+        <span class="faq-num">01</span>
+        <h3>What is the delivery time?</h3>
+        <p>Standard timeline typically takes 2-4 business weeks for web development, and 1-2 weeks for design projects.</p>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="faq-card faq-card-2">
+        <div class="faq-pin"></div>
+        <span class="faq-num">02</span>
+        <h3>Do you offer a satisfaction guarantee?</h3>
+        <p>Yes, we offer iterative reviews. If you're not completely satisfied with prototypes, we revise until it fits.</p>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="faq-card faq-card-3">
+        <div class="faq-pin"></div>
+        <span class="faq-num">03</span>
+        <h3>How do I track my project?</h3>
+        <p>Once your project starts, you'll receive a client portal link with real-time tracking, milestones, and updates.</p>
+      </div>
+      
+      <!-- Card 4 -->
+      <div class="faq-card faq-card-4">
+        <div class="faq-pin"></div>
+        <span class="faq-num">04</span>
+        <h3>Are your codebases scalable?</h3>
+        <p>We're committed to future-proofing. Our architectures are modular and we write clean, documented code.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section id="cta" class="cta-sec">
+  <div class="container">
+    <div class="cta-card reveal fade in">
+      <div class="cta-bg">
+        <picture>
+          <source srcset="https://images.pexels.com/photos/12696433/pexels-photo-12696433.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260&fm=webp" type="image/webp">
+          <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/12696433/pexels-photo-12696433.jpeg" alt="Abstract view of glowing data streams in a server room" loading="lazy">
+        </picture>
+        <div class="cta-overlay"></div>
+      </div>
+      <div class="cta-content">
+        <h2>Open the door to growth with FaDev</h2>
+        <p>Get a personalized demo and see how my solutions can revolutionize your online presence and revenue.</p>
+        <a href="#" class="btn-solid-white">Book a Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="#" class="brand-name">FaDev</a>
+        <p>Building bespoke web applications with custom features, modern JavaScript, and specialized backend solutions.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FADEV CODES. ALL RIGHTS RESERVED.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="Fiverr"><img src="https://raw.githubusercontent.com/bdlfateh15-maker/myportfolio/d4ce337c0dab193c633b0e9be2d2e6fc6d43f960/fiverr-svgrepo-com.svg" alt="Fiverr"></a>
+        <a href="#" aria-label="Freelancer"><img src="https://raw.githubusercontent.com/bdlfateh15-maker/myportfolio/d4ce337c0dab193c633b0e9be2d2e6fc6d43f960/freelancer-svgrepo-com.svg" alt="Freelancer"></a>
+        <a href="#" aria-label="Facebook"><img src="https://raw.githubusercontent.com/bdlfateh15-maker/myportfolio/d4ce337c0dab193c633b0e9be2d2e6fc6d43f960/facebook-svgrepo-com%20(1).svg" alt="Facebook"></a>
+        <a href="#" aria-label="Instagram"><img src="https://raw.githubusercontent.com/bdlfateh15-maker/myportfolio/d4ce337c0dab193c633b0e9be2d2e6fc6d43f960/instagram-svgrepo-com.svg" alt="Instagram"></a>
+        <a href="#" aria-label="LinkedIn"><img src="https://raw.githubusercontent.com/bdlfateh15-maker/myportfolio/d4ce337c0dab193c633b0e9be2d2e6fc6d43f960/linked-in-logo-of-two-letters-svgrepo-com.svg" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-banner" class="cookie-banner">
+  <p>We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies. <a href="cookies.html">Read our Cookie Policy</a>.</p>
+  <div class="cookie-banner-actions">
+    <button id="cookie-decline-btn" class="btn-text">Decline</button>
+    <button id="cookie-accept-btn" class="btn-solid-white">Accept</button>
+  </div>
+</div>
+
+<!-- NEW MOBILE RADIAL MENU -->
+<nav id="radial-menu" class="uiverse-menu">
+  <div class="uiverse-menu-center">
+    <button id="radial-menu-toggle" class="uiverse-menu-toggle" aria-label="Toggle menu">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="uiverse-menu-items">
+    <!-- About -->
+    <a href="services.html" class="uiverse-menu-item item-1">
+      <div class="uiverse-menu-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+      </div>
+      <span class="uiverse-menu-label">Services</span>
+    </a>
+
+    <!-- Contact -->
+    <a href="contact.html" class="uiverse-menu-item item-2">
+      <div class="uiverse-menu-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+      </div>
+      <span class="uiverse-menu-label">Contact</span>
+    </a>
+  </div>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>

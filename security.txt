@@ -1,0 +1,5 @@
+# Contact email for security-related inquiries
+Contact: mailto:bdlfateh15@gmail.com
+
+# A link to a page where security researchers can find more information
+Policy: https://www.portfolio.com/contact.html
