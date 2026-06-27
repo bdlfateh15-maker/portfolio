@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Zilla+Slab:wght@600;700&display=swap">
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body data-new-gr-c-s-check-loaded="14.1304.0" data-gr-ext-installed="">
@@ -97,48 +96,43 @@
 </main>
 
 <!-- ABOUT -->
-<section id="about" class="about">
+<section id="about" class="about reveal">
   <div class="container">
-    <div class="about-top reveal fade in">
-      <div class="who">
+    <div class="about-grid">
+      <!-- Image on the left -->
+      <div class="about-image-wrapper reveal-left">
         <picture>
           <source srcset="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940&fm=webp" type="image/webp">
-          <img class="avatar lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="A portrait of Fateh, Full-Stack Developer and UI Architect." loading="lazy">
+          <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="A portrait of Fateh, Full-Stack Developer and UI Architect." loading="lazy">
         </picture>
-        <span class="tag">Fateh</span>
+        <div class="about-image-overlay"></div>
       </div>
-      <span class="tag muted">Full Stack Developer</span>
-    </div>
-
-    <div class="about-grid">
-      <div class="mosaic reveal left in">
-        <div class="mosaic-grid">
-          <div class="sq sq-1 reveal scale in" style="transition-delay:.25s"></div>
-          <div class="sq sq-2 reveal scale in" style="transition-delay:.35s"></div>
-          <div class="sq sq-3 reveal scale in" style="transition-delay:.5s"></div>
-          <div class="portrait reveal fade in" style="transition-delay:.1s">
-            <picture>
-              <source srcset="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940&fm=webp" type="image/webp">
-              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="Fateh, a professional full-stack developer, in a creative setting." loading="lazy">
-            </picture>
-            <div class="grid-lines"></div>
+      
+      <!-- Content on the right -->
+      <div class="about-content reveal-right">
+        <span class="eyebrow-dark">_About Me</span>
+        <h2>From Vision to Reality, One Line of Code at a Time.</h2>
+        <p class="about-intro">I'm a full-stack developer with a passion for building elegant, high-performance web solutions. My philosophy is simple: write clean, intentional code that translates into beautiful, functional products. I thrive on turning complex problems into seamless user experiences.</p>
+        
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg></div>
+            <div class="value-text">
+              <h3>Clean Code</h3>
+              <p>Prioritizing readability, scalability, and maintainability in every project.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
+            <div class="value-text">
+              <h3>Performance First</h3>
+              <p>Optimizing for speed to ensure a fast and responsive user experience.</p>
+            </div>
           </div>
         </div>
-        <div class="floating-sq reveal in" style="transition-delay:.6s">
-          <div class="a"></div><div class="b"></div>
-        </div>
-      </div>
-
-      <div class="copy">
-        <h2 class="reveal in">About <br> The Craft</h2>
-        <blockquote class="quote reveal in" style="transition-delay:.15s">"I go beyond the norm to craft every line of code with purpose. Software engineering is the foundation, but every project deserves a love letter."</blockquote>
-        <div class="two-col">
-          <p class="reveal in" style="transition-delay:.25s">I dedicate my mind to crafting every line of code you throw at me. Whether you need a simple, elegant website or a complex, mind-blowing application, it is all possible. Sit down, and let me build your next project.</p>
-          <div class="reveal in" style="transition-delay:.4s">
-            <h3>Code Philosophy</h3>
-            <p>Every line of code is written with intention. I believe that beautiful code leads to beautiful products. Clean, maintainable, and scalable solutions are not optional—they are the standard for high-quality development.</p>
-            <a href="about.html" class="read-more">Read More</a>
-          </div>
+        
+        <div class="about-cta">
+          <a href="contact.html" class="btn-outline">Let's Connect →</a>
         </div>
       </div>
     </div>
@@ -399,13 +393,12 @@
 </section>
 
 <!-- TESTIMONIALS -->
-<section id="testimonials" class="testimonials-sec">
+<section id="testimonials" class="testimonials-sec" style="height: 400vh;">
   <div class="testimonials-sticky">
-    <div class="testimonials-header reveal-wave in">
-      <h2 class="wave-item" style="transition-delay: .1s">Trusted by Industry Leaders</h2>
+    <div class="testimonials-header reveal-wave">
+      <h2 class="wave-item">Trusted by Industry Leaders</h2>
     </div>
-    
-    <div class="testimonials-track" id="testimonials-track" style="transform: translateX(-1081.34px);">
+    <div class="testimonials-track" id="testimonials-track">
       <!-- Card 1 -->
       <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
         <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
@@ -415,38 +408,32 @@
         <div class="test-divider"></div>
         <div class="test-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
           <div class="author-info">
-            <picture>
-              <source srcset="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=100&fm=webp" type="image/webp">
-              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Dianne Russell, a satisfied client." loading="lazy">
-            </picture>
+            <img class="lazy loaded" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=100" data-src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Dianne Russell, a satisfied client." loading="lazy">
             <div class="author-text">
               <h4 itemprop="name">Dianne Russell</h4>
               <span itemprop="jobTitle">Nursing Assistant</span>
             </div>
           </div>
-          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="#D1D5DB"></path></svg></div>
+          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="currentColor"></path></svg></div>
         </div>
       </div>
-      
+
       <!-- Card 2 -->
       <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
         <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
           <meta itemprop="ratingValue" content="5">★★★★★
         </div>
-        <p class="test-text" itemprop="reviewBody">"The bespoke architecture they built for our platform is flawless. The clean code and optimized SQL database queries handle our real-time data needs without breaking a sweat. A truly professional developer."</p>
+        <p class="test-text" itemprop="reviewBody">"The bespoke architecture they built is flawless. The clean code and optimized SQL queries handle our real-time data needs without breaking a sweat. A truly professional developer."</p>
         <div class="test-divider"></div>
         <div class="test-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
           <div class="author-info">
-            <picture>
-              <source srcset="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=100&fm=webp" type="image/webp">
-              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Albert Flores, a satisfied client." loading="lazy">
-            </picture>
+            <img class="lazy loaded" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=100" data-src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Albert Flores, a satisfied client." loading="lazy">
             <div class="author-text">
               <h4 itemprop="name">Albert Flores</h4>
               <span itemprop="jobTitle">Product Manager</span>
             </div>
           </div>
-          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="#D1D5DB"></path></svg></div>
+          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="currentColor"></path></svg></div>
         </div>
       </div>
 
@@ -455,20 +442,17 @@
         <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
           <meta itemprop="ratingValue" content="5">★★★★★
         </div>
-        <p class="test-text" itemprop="reviewBody">"I was blown away by their attention to detail in the frontend development. Every CSS animation is smooth, and the semantic HTML has dramatically improved our site's accessibility and SEO."</p>
+        <p class="test-text" itemprop="reviewBody">"I was blown away by their attention to detail in the frontend. Every CSS animation is smooth, and the semantic HTML has dramatically improved our site's accessibility and SEO."</p>
         <div class="test-divider"></div>
         <div class="test-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
           <div class="author-info">
-            <picture>
-              <source srcset="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&fm=webp" type="image/webp">
-              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Leslie Alexander, a satisfied client." loading="lazy">
-            </picture>
+            <img class="lazy loaded" src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100" data-src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Leslie Alexander, a satisfied client." loading="lazy">
             <div class="author-text">
               <h4 itemprop="name">Leslie Alexander</h4>
               <span itemprop="jobTitle">CEO, TechNova</span>
             </div>
           </div>
-          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="#D1D5DB"></path></svg></div>
+          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="currentColor"></path></svg></div>
         </div>
       </div>
 
@@ -481,16 +465,13 @@
         <div class="test-divider"></div>
         <div class="test-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
           <div class="author-info">
-            <picture>
-              <source srcset="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=100&fm=webp" type="image/webp">
-              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Cody Fisher, a satisfied client." loading="lazy">
-            </picture>
+            <img class="lazy loaded" src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=100" data-src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Cody Fisher, a satisfied client." loading="lazy">
             <div class="author-text">
               <h4 itemprop="name">Cody Fisher</h4>
               <span itemprop="jobTitle">Startup Founder</span>
             </div>
           </div>
-          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="#D1D5DB"></path></svg></div>
+          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="currentColor"></path></svg></div>
         </div>
       </div>
 
@@ -503,16 +484,13 @@
         <div class="test-divider"></div>
         <div class="test-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
           <div class="author-info">
-            <picture>
-              <source srcset="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=100&fm=webp" type="image/webp">
-              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Jane Cooper, a satisfied client." loading="lazy">
-            </picture>
+            <img class="lazy loaded" src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=100" data-src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Portrait of Jane Cooper, a satisfied client." loading="lazy">
             <div class="author-text">
               <h4 itemprop="name">Jane Cooper</h4>
               <span itemprop="jobTitle">Marketing Director</span>
             </div>
           </div>
-          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="#D1D5DB"></path></svg></div>
+          <div class="quote-icon"><svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 15.5H8.5C8.5 10.5 11.5 8.5 15.5 7.5V0C6.5 2 0.5 8 0.5 15.5V31.5H15.5V15.5ZM41.5 15.5H34.5C34.5 10.5 37.5 8.5 41.5 7.5V0C32.5 2 26.5 8 26.5 15.5V31.5H41.5V15.5Z" fill="currentColor"></path></svg></div>
         </div>
       </div>
     </div>
@@ -520,44 +498,44 @@
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="py-16 px-4 sm:px-8" style="background-color: #f4f7fb;">
+<section id="services" class="services-section-tailwind">
     
-    <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-            <span class="text-sm font-medium tracking-wide text-gray-600 block mb-3">_Our services</span>
-            <h2 class="text-4xl md:text-5xl font-semibold leading-tight text-black">Creative Solutions For<br>Every Design Need</h2>
+    <div class="services-container-tailwind">
+        <div class="services-header-tailwind">
+            <span class="services-eyebrow-tailwind">_Our services</span>
+            <h2 class="services-heading-tailwind">Creative Solutions For<br>Every Design Need</h2>
         </div>
 
-        <div class="space-y-4" id="accordion-container">
+        <div class="accordion-container-tailwind" id="accordion-container">
             <!-- Item 1: Web Development -->
-            <div class="accordion-item bg-white rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] overflow-hidden w-full transition-shadow duration-300">
-                <div class="accordion-header w-full flex items-center p-8 cursor-pointer transition-colors hover:bg-gray-50">
-                    <div class="icon-bg w-8 h-8 rounded-full flex items-center justify-center relative mr-5 shrink-0 transition-colors duration-300">
-                        <div class="icon-horizontal w-3 h-[1.5px] bg-black absolute"></div>
-                        <div class="icon-vertical h-3 w-[1.5px] bg-black absolute"></div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <div class="icon-bg">
+                        <div class="icon-horizontal"></div>
+                        <div class="icon-vertical"></div>
                     </div>
-                    <h3 class="text-2xl font-medium text-black">Web Development</h3>
+                    <h3>Web Development</h3>
                 </div>
                 <div class="accordion-content-wrapper">
                     <div class="accordion-content">
-                        <div class="px-8 pb-8 pt-0 flex flex-col md:flex-row gap-8">
+                        <div class="accordion-content-inner">
                             <div class="flex-1">
-                                <p class="text-gray-700 leading-relaxed mb-6 max-w-md">Our team delivers robust, future-ready web experiences — clean code, seamless speed, zero compromise. Every module, page, and system is tailored.</p>
-                                <a href="#" class="inline-block text-black font-semibold text-sm border-b-2 border-black pb-0.5 hover:text-gray-600 hover:border-gray-600 transition-colors mb-8">Contact Us ↗</a>
-                                <div class="flex flex-wrap gap-3">
-                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">App Development</span>
-                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">Brand Identity</span>
-                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">UI/UX Design</span>
+                                <p>Our team delivers robust, future-ready web experiences — clean code, seamless speed, zero compromise. Every module, page, and system is tailored.</p>
+                                <a href="contact.html">Contact Us ↗</a>
+                                <div class="flex-wrap gap-3">
+                                    <span class="tag-span">App Development</span>
+                                    <span class="tag-span">Brand Identity</span>
+                                    <span class="tag-span">UI/UX Design</span>
                                 </div>
                             </div>
-                            <div class="flex gap-4 w-full md:w-1/2">
+                            <div class="accordion-image-container">
                                 <picture>
                                   <source srcset="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80&fm=webp" type="image/webp">
-                                  <img class="lazy w-1/2 h-48 object-cover rounded-lg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80" alt="A team of developers collaborating on a web development project." loading="lazy">
+                                  <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80" alt="A team of developers collaborating on a web development project." loading="lazy">
                                 </picture>
                                 <picture>
                                   <source srcset="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80&fm=webp" type="image/webp">
-                                  <img class="lazy w-1/2 h-48 object-cover rounded-lg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="Close-up of clean PHP code on a dark-themed editor." loading="lazy">
+                                  <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="Close-up of clean PHP code on a dark-themed editor." loading="lazy">
                                 </picture>
                             </div>
                         </div>
@@ -566,34 +544,34 @@
             </div>
 
             <!-- Item 2: UI/UX Design -->
-            <div class="accordion-item bg-white rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] overflow-hidden w-full transition-shadow duration-300">
-                <div class="accordion-header w-full flex items-center p-8 cursor-pointer transition-colors hover:bg-gray-50">
-                    <div class="icon-bg w-8 h-8 rounded-full flex items-center justify-center relative mr-5 shrink-0 transition-colors duration-300">
-                        <div class="icon-horizontal w-3 h-[1.5px] bg-black absolute"></div>
-                        <div class="icon-vertical h-3 w-[1.5px] bg-black absolute"></div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <div class="icon-bg">
+                        <div class="icon-horizontal"></div>
+                        <div class="icon-vertical"></div>
                     </div>
-                    <h3 class="text-2xl font-medium text-black">UI/UX Design</h3>
+                    <h3>UI/UX Design</h3>
                 </div>
                 <div class="accordion-content-wrapper">
                     <div class="accordion-content">
-                        <div class="px-8 pb-8 pt-0 flex flex-col md:flex-row gap-8">
+                        <div class="accordion-content-inner">
                             <div class="flex-1">
-                                <p class="text-gray-700 leading-relaxed mb-6 max-w-md">Our team designs immersive, human-centered experiences — clear journeys, elegant visuals, meaningful motion. Every wireframe, flow, and detail is refined.</p>
-                                <a href="#" class="inline-block text-black font-semibold text-sm border-b-2 border-black pb-0.5 hover:text-gray-600 hover:border-gray-600 transition-colors mb-8">Contact Us ↗</a>
-                                <div class="flex flex-wrap gap-3">
-                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">UI/UX Design</span>
-                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">App Development</span>
-                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">Brand Identity</span>
+                                <p>Our team designs immersive, human-centered experiences — clear journeys, elegant visuals, meaningful motion. Every wireframe, flow, and detail is refined.</p>
+                                <a href="contact.html">Contact Us ↗</a>
+                                <div class="flex-wrap gap-3">
+                                    <span class="tag-span">UI/UX Design</span>
+                                    <span class="tag-span">App Development</span>
+                                    <span class="tag-span">Brand Identity</span>
                                 </div>
                             </div>
-                            <div class="flex gap-4 w-full md:w-1/2">
+                            <div class="accordion-image-container">
                                 <picture>
                                   <source srcset="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80&fm=webp" type="image/webp">
-                                  <img class="lazy w-1/2 h-48 object-cover rounded-lg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80" alt="A UI/UX designer sketching wireframes for a new mobile app." loading="lazy">
+                                  <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80" alt="A UI/UX designer sketching wireframes for a new mobile app." loading="lazy">
                                 </picture>
                                 <picture>
                                   <source srcset="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80&fm=webp" type="image/webp">
-                                  <img class="lazy w-1/2 h-48 object-cover rounded-lg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="A screen displaying a colorful and modern user interface design." loading="lazy">
+                                  <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="A screen displaying a colorful and modern user interface design." loading="lazy">
                                 </picture>
                             </div>
                         </div>
@@ -602,34 +580,34 @@
             </div>
 
             <!-- Item 3: Website Reviews -->
-            <div class="accordion-item bg-white rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] overflow-hidden w-full transition-shadow duration-300">
-                <div class="accordion-header w-full flex items-center p-8 cursor-pointer transition-colors hover:bg-gray-50">
-                    <div class="icon-bg w-8 h-8 rounded-full flex items-center justify-center relative mr-5 shrink-0 transition-colors duration-300">
-                        <div class="icon-horizontal w-3 h-[1.5px] bg-black absolute"></div>
-                        <div class="icon-vertical h-3 w-[1.5px] bg-black absolute"></div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <div class="icon-bg">
+                        <div class="icon-horizontal"></div>
+                        <div class="icon-vertical"></div>
                     </div>
-                    <h3 class="text-2xl font-medium text-black">Website Reviews</h3>
+                    <h3>Website Reviews</h3>
                 </div>
                 <div class="accordion-content-wrapper">
                     <div class="accordion-content">
-                        <div class="px-8 pb-8 pt-0 flex flex-col md:flex-row gap-8">
+                        <div class="accordion-content-inner">
                             <div class="flex-1">
-                                <p class="text-gray-700 leading-relaxed mb-6 max-w-md">We perform comprehensive audits to ensure your website performs at its peak. Our reviews cover usability, performance, and SEO best practices.</p>
-                                <a href="#" class="inline-block text-black font-semibold text-sm border-b-2 border-black pb-0.5 hover:text-gray-600 hover:border-gray-600 transition-colors mb-8">Schedule Audit ↗</a>
-                                <div class="flex flex-wrap gap-3">
-                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">Performance Audit</span>
-                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">SEO Review</span>
-                                    <span class="px-4 py-2 bg-white border border-gray-200 text-gray-600 text-sm rounded-md">UX/UI Audit</span>
+                                <p>We perform comprehensive audits to ensure your website performs at its peak. Our reviews cover usability, performance, and SEO best practices.</p>
+                                <a href="contact.html">Schedule Audit ↗</a>
+                                <div class="flex-wrap gap-3">
+                                    <span class="tag-span">Performance Audit</span>
+                                    <span class="tag-span">SEO Review</span>
+                                    <span class="tag-span">UX/UI Audit</span>
                                 </div>
                             </div>
-                            <div class="flex gap-4 w-full md:w-1/2">
+                            <div class="accordion-image-container">
                                 <picture>
                                   <source srcset="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80&fm=webp" type="image/webp">
-                                  <img class="lazy w-1/2 h-48 object-cover rounded-lg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80" alt="A technical SEO audit report on a laptop screen." loading="lazy">
+                                  <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80" alt="A technical SEO audit report on a laptop screen." loading="lazy">
                                 </picture>
                                 <picture>
                                   <source srcset="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80&fm=webp" type="image/webp">
-                                  <img class="lazy w-1/2 h-48 object-cover rounded-lg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="A graph showing website performance metrics improving over time." loading="lazy">
+                                  <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="A graph showing website performance metrics improving over time." loading="lazy">
                                 </picture>
                             </div>
                         </div>
