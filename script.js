@@ -136,23 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
     testimonialsTrack.addEventListener('touchmove', doDrag, { passive: false });
   }
 
-  function initCookieBanner() {
-    const banner = document.getElementById('cookie-banner');
-    const acceptBtn = document.getElementById('cookie-accept-btn');
-    const declineBtn = document.getElementById('cookie-decline-btn');
-    if (!banner) return;
-
-    if (!localStorage.getItem('cookies_accepted')) {
-      banner.classList.add('show');
-    }
-    const hideBanner = () => banner.classList.remove('show');
-    acceptBtn.addEventListener('click', () => {
-      localStorage.setItem('cookies_accepted', 'true');
-      hideBanner();
-    });
-    declineBtn.addEventListener('click', hideBanner);
-  }
-
   function initRadialMenu() {
     const menu = document.getElementById('radial-menu');
     const toggle = document.getElementById('radial-menu-toggle');
@@ -287,7 +270,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarObserver();
   initProjectFiltering();
   initDraggableTestimonials();
-  initCookieBanner();
   initRadialMenu();
   initServicesAccordion();
   initContactForm();
