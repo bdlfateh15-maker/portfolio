@@ -124,6 +124,13 @@
       opacity: 0;
       animation: slide-from-left .8s cubic-bezier(.22,1,.36,1) 1.1s both;
     }
+
+.btn-contact-animated {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
     
     .stats{display:flex;flex-direction:column;gap:1.5rem}
     .stat{opacity:0;animation:slide-from-right .8s cubic-bezier(.22,1,.36,1) both}
