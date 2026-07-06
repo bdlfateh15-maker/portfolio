@@ -8,10 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Zilla+Slab:wght@600;700&display=swap">
-    <!-- GSAP for Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Lenis for Smooth Scrolling -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
 
     <script>
@@ -71,7 +69,6 @@
             font-weight: 700;
         }
 
-
         /* Letter-by-letter scroll coloring target classes */
         .reveal-char {
             color: #d4d4d8; /* Initial muted grey */
@@ -93,7 +90,7 @@
             justify-content: center;
         }
 
-        /* LAPTOP MOCKUP */
+        /* LAPTOP CONTAINER */
         .laptop-wrapper {
             position: absolute;
             width: 80vw;
@@ -109,28 +106,11 @@
             transform: scale(1.02) rotateY(-5deg) rotateX(2deg);
         }
 
-        .laptop-screen-content {
-            position: absolute;
-            top: 11.2%;
-            left: 11.6%;
-            width: 76.8%;
-            height: 71.8%;
-            background: #fff;
-            border-radius: 2px;
-            overflow: hidden;
-            z-index: 1;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
-        }
-
-        /* TABLET MOCKUP (Minimalist Pure CSS) */
+        /* TABLET CONTAINER */
         .tablet-wrapper {
             position: absolute;
-            width: 320px;
-            height: 460px;
-            background: #18181b;
-            border-radius: 28px;
-            padding: 10px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+            width: 480px;
+            height: 350px;
             transform-style: preserve-3d;
             will-change: transform, opacity;
             opacity: 0;
@@ -141,24 +121,11 @@
             transform: scale(1.03) rotateY(5deg);
         }
 
-        .tablet-screen {
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* PHONE MOCKUP (Minimalist Pure CSS) */
+        /* PHONE CONTAINER */
         .phone-wrapper {
             position: absolute;
-            width: 180px;
-            height: 380px;
-            background: #18181b;
-            border-radius: 36px;
-            padding: 8px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            width: 260px;
+            height: 480px;
             transform-style: preserve-3d;
             will-change: transform, opacity;
             opacity: 0;
@@ -167,27 +134,6 @@
 
         .phone-wrapper:hover {
             transform: scale(1.05) rotateZ(-2deg);
-        }
-
-        .phone-screen {
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            border-radius: 30px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .phone-notch {
-            position: absolute;
-            top: 6px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 12px;
-            background: #18181b;
-            border-radius: 6px;
-            z-index: 10;
         }
 
         /* Structural spacers */
@@ -203,85 +149,26 @@
 </head>
 <body class="bg-paper text-ink antialiased">
 
-    <!-- Subtle Premium Grain overlay -->
     <div class="fixed inset-0 pointer-events-none opacity-[0.015] z-50 bg-repeat bg-center" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.85\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E');"></div>
 
     <div class="devices-stage">
         
-        <!-- Laptop Device (Mockup 1) -->
         <div class="laptop-wrapper" id="laptop-device">
-            <div class="laptop-screen-content">
-                <!-- Real-looking design mockup rendered inside -->
-                <div class="w-full h-full flex flex-col justify-between p-6 bg-[#f4f4f5]">
-                    <div class="flex justify-between items-center">
-                        <div class="h-4 w-12 bg-zinc-900 rounded-sm"></div>
-                        <div class="flex space-x-2">
-                            <div class="h-1.5 w-6 bg-zinc-300"></div>
-                            <div class="h-1.5 w-6 bg-zinc-300"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="text-[2.2rem] title-main font-semibold text-zinc-950 leading-none mb-1">ConverYou</div>
-                        <div class="text-[2.2rem] title-main italic text-accent leading-none mb-3">Dashboard</div>
-                        <div class="w-2/3 h-2 bg-zinc-900 mb-1"></div>
-                        <div class="w-1/2 h-1.5 bg-zinc-400"></div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <div class="w-14 h-5 bg-accent"></div>
-                        <div class="w-8 h-8 rounded-full border border-zinc-300"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Beautiful transparent screen-rimmed laptop image -->
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/018/742/939/small/laptop-computer-with-blank-transparent-screen-and-background-format-png.png" alt="Laptop Frame" class="absolute inset-0 w-full h-full object-contain z-10 filter drop-shadow(0 15px 35px rgba(0,0,0,0.06))">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/018/742/939/small/laptop-computer-with-blank-transparent-screen-and-background-format-png.png" alt="Laptop Image Asset" class="w-full h-full object-contain filter drop-shadow(0 15px 35px rgba(0,0,0,0.06))">
         </div>
 
-        <!-- Tablet Device (Mockup 2) -->
         <div class="tablet-wrapper" id="tablet-device">
-            <div class="tablet-screen">
-                <div class="w-full h-full flex flex-col justify-between p-6 bg-zinc-50">
-                    <div class="flex justify-between">
-                        <div class="h-1.5 w-12 bg-neutral-800"></div>
-                        <div class="h-1.5 w-4 bg-accent"></div>
-                    </div>
-                    <div class="space-y-2">
-                        <div class="h-8 w-8 rounded-full border-2 border-accent flex items-center justify-center text-[10px] font-bold text-accent">02</div>
-                        <h4 class="title-main italic text-2xl text-neutral-900">Integrated CRM</h4>
-                        <p class="text-[10px] text-neutral-400 leading-normal">Manage conversations, track leads, and analyze customer data in one place.</p>
-                    </div>
-                    <div class="w-full h-24 bg-neutral-950 p-3 text-white flex flex-col justify-between">
-                        <div class="w-8 h-1 bg-white"></div>
-                        <div class="w-full h-4 bg-accent"></div>
-                    </div>
-                </div>
-            </div>
+            <img src="https://raw.githubusercontent.com/bdlfateh15-maker/portfolio/refs/heads/main/images-removebg-preview.png" alt="Tablet Image Asset" class="w-full h-full object-contain filter drop-shadow(0 20px 45px rgba(0,0,0,0.07))">
         </div>
 
-        <!-- Phone Device (Mockup 3) -->
         <div class="phone-wrapper" id="phone-device">
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-                <div class="w-full h-full flex flex-col justify-between p-5 pt-8 bg-[#fafafa]">
-                    <div class="flex justify-between items-center">
-                        <div class="text-[10px] font-bold text-neutral-900">M.CO</div>
-                        <div class="w-3 h-3 rounded-full bg-accent"></div>
-                    </div>
-                    <div class="space-y-2">
-                        <div class="h-0.5 w-8 bg-neutral-900"></div>
-                        <p class="text-lg title-main italic font-semibold leading-tight text-neutral-900">Reply on the go. Never miss a lead.</p>
-                    </div>
-                    <div class="w-full h-10 bg-accent flex items-center justify-center">
-                        <span class="text-[9px] font-bold tracking-wider text-white uppercase">Swipe</span>
-                    </div>
-                </div>
-            </div>
+            <img src="https://raw.githubusercontent.com/bdlfateh15-maker/portfolio/refs/heads/main/360_F_535891750_ISRZFyMQHxARc6rqRtESODC3zgIBX9Ec-removebg-preview.png" alt="Phone Image Asset" class="w-full h-full object-contain filter drop-shadow(0 25px 50px rgba(0,0,0,0.09))">
         </div>
 
     </div>
 
     <main class="relative z-20">
 
-        <!-- Scene 1: Editorial Hero Cover -->
         <section 
             class="scroll-section flex-col justify-center px-6 text-center pt-32" 
             id="scene-hero" 
@@ -298,29 +185,20 @@
             </div>
         </section>
 
-        <!-- Scene 2: Laptop Reveal + Ink-bleed Text -->
         <section class="scroll-section px-6 md:px-24" id="scene-laptop">
             <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12">
                 <div class="md:col-span-5 flex flex-col justify-center py-20">
                     <span class="text-[10px] font-bold tracking-[0.2em] text-accent uppercase mb-4">Platform 01 // The Dashboard</span>
-                    <!-- Splitting words for sequential scroll transition -->
                     <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight transition-heading" id="reveal-text-1">
                         A unified dashboard to build, manage, and analyze your bots.
                     </h2>
                     <p class="text-md text-neutral-500 leading-relaxed mb-8 max-w-sm">
                         Create powerful conversational flows with our intuitive drag-and-drop builder. No code required.
                     </p>
-                    <div>
-                        <a href="#" class="inline-flex items-center gap-2 text-xs font-extrabold tracking-widest uppercase text-ink hover:text-accent transition-colors">
-                            Explore Features
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
  
-        <!-- Scene 3: Tablet Entrance + Ink-bleed Text -->
         <section class="scroll-section px-6 md:px-24" id="scene-tablet">
             <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12">
                 <div class="md:col-span-5 md:col-start-8 flex flex-col justify-center py-20">
@@ -331,17 +209,10 @@
                     <p class="text-md text-neutral-500 leading-relaxed mb-8 max-w-sm">
                         Track user interactions, manage leads, and view customer history without ever leaving the platform.
                     </p>
-                    <div>
-                        <a href="#" class="inline-flex items-center gap-2 text-xs font-extrabold tracking-widest uppercase text-ink hover:text-accent transition-colors">
-                            See CRM in Action
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Scene 4: Phone Focus + Ink-bleed Text -->
         <section class="scroll-section px-6 md:px-24" id="scene-phone">
             <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12">
                 <div class="md:col-span-5 flex flex-col justify-center py-20">
@@ -352,17 +223,10 @@
                     <p class="text-md text-neutral-500 leading-relaxed mb-8 max-w-sm">
                         Our fully responsive interface lets you reply to customers, check analytics, and manage your bots on the go.
                     </p>
-                    <div>
-                        <a href="#" class="inline-flex items-center gap-2 text-xs font-extrabold tracking-widest uppercase text-ink hover:text-accent transition-colors">
-                            Learn About Mobility
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
  
-        <!-- Scene 5: Outro Call-To-Action -->
         <section class="h-[100vh] flex flex-col items-center justify-center text-center relative z-20 px-6" id="scene-outro">
             <span class="text-xs uppercase font-extrabold tracking-[0.25em] text-neutral-400 mb-6">Begin Your Project</span>
             <h2 class="text-4xl md:text-7xl font-extrabold tracking-tight mb-10 leading-none">
@@ -389,12 +253,10 @@
             infinite: false,
         });
 
-        // Hook Lenis scrolling into GSAP updates
         lenis.on('scroll', ScrollTrigger.update);
         gsap.ticker.add((time) => { lenis.raf(time * 1000); });
         gsap.ticker.lagSmoothing(0);
 
-        // Register GSAP Plugin
         gsap.registerPlugin(ScrollTrigger);
 
         function setupInkBleedText(elementId) {
@@ -409,7 +271,6 @@
                 wordSpan.style.display = 'inline-block';
                 wordSpan.className = 'mr-2 whitespace-nowrap';
                 
-                // Split words into letters
                 word.split('').forEach((char) => {
                     const charSpan = document.createElement('span');
                     charSpan.className = 'reveal-char';
@@ -421,11 +282,9 @@
             });
         }
 
-        // Initialize Split Texts
         setupInkBleedText('reveal-text-1');
         setupInkBleedText('reveal-text-2');
         setupInkBleedText('reveal-text-3');
-
 
         const masterTl = gsap.timeline({
             scrollTrigger: {
@@ -441,16 +300,14 @@
         gsap.set("#tablet-device", { scale: 0.7, opacity: 0, y: 250, rotationY: -25, transformPerspective: 1000 });
         gsap.set("#phone-device", { scale: 0.6, opacity: 0, y: 300, rotationZ: 20, transformPerspective: 1000 });
  
-        /* --- STAGE 1: Laptop Journey (Scene-Hero to Scene-Laptop) --- */
+        /* --- STAGE 1: Laptop Journey --- */
         masterTl
-            // Zoom into the laptop from the initial desk view
             .to("#laptop-device", {
                 scale: 0.95,
                 y: 0,
                 rotationX: 0,
                 ease: "power1.inOut"
             }, "introZoom")
-            // Fade out hero text during zoom
             .to("#scene-hero", {
                 opacity: 0,
                 ease: "power1.inOut"
@@ -458,7 +315,6 @@
             .to("#laptop-device", {
                 ease: "power2.out"
             }, "heroToLaptop")
-            // Move Laptop Mockup to the right half to make space for left side text
             .to("#laptop-device", {
                 x: '20vw',
                 y: '-2vh',
@@ -469,7 +325,6 @@
             }, "laptopFocus")
 
         /* --- STAGE 2: Tablet Entrance & Laptop Retreat --- */
-            // Slide Laptop Away
             .to("#laptop-device", {
                 x: '-20vw',
                 y: '-100vh',
@@ -478,7 +333,6 @@
                 rotationY: -60,
                 ease: "power2.in"
             }, "laptopToTablet")
-            // Fly Tablet Mockup into center-left position (Facing right text)
             .to("#tablet-device", {
                 opacity: 1,
                 scale: 1,
@@ -490,7 +344,6 @@
             }, "laptopToTablet")
 
         /* --- STAGE 3: Phone Entrance & Tablet Retreat --- */
-            // Slide Tablet Away
             .to("#tablet-device", {
                 x: '30vw',
                 y: '100vh',
@@ -499,7 +352,6 @@
                 rotationY: 55,
                 ease: "power2.in"
             }, "tabletToPhone")
-            // Fly Phone Mockup into Center-Right Position
             .to("#phone-device", {
                 opacity: 1,
                 scale: 1,
@@ -519,10 +371,8 @@
                 ease: "power2.in"
             }, "phoneToOutro");
 
-
         function registerInkBleedTrigger(sectionId, elementId) {
             const charSpans = document.querySelectorAll(`#${elementId} .reveal-char`);
-            
             if (charSpans.length === 0) return;
 
             gsap.timeline({
@@ -533,18 +383,16 @@
                     scrub: true
                 }
             }).to(charSpans, {
-                color: "#09090b", // Transitions cleanly to ink black letter by letter
+                color: "#09090b",
                 stagger: 0.05,
                 ease: "none"
             });
         }
 
-        // Bind text colors actions to physical location triggers
         registerInkBleedTrigger('scene-laptop', 'reveal-text-1');
         registerInkBleedTrigger('scene-tablet', 'reveal-text-2');
         registerInkBleedTrigger('scene-phone', 'reveal-text-3');
         
-        // Outro CTA buttons animation
         gsap.timeline({
             scrollTrigger: {
                 trigger: '#scene-outro',
@@ -559,7 +407,6 @@
             duration: 0.8,
             ease: 'power3.out'
         });
-
     </script>
 </body>
 </html>
