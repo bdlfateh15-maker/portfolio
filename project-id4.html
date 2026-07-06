@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConverYou | Automated Chat & CRM</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Zilla+Slab:wght@600;700&display=swap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                     fontFamily: {
+                        sans: ['"Montserrat"', 'sans-serif'],
+                        serif: ['"Zilla Slab"', 'serif'],
+                     },
+                    colors: {
+                        accent: '#f1aaff',
+                        ink: '#0a0a0a',
+                        paper: '#ffffff',
+                        graylight: '#f4f4f5'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: var(--paper, #fff);
+            color: var(--ink, #0a0a0a);
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: auto !important; 
+        }
+
+        ::selection {
+            background-color: #f1aaff;
+            color: #fff;
+        }
+
+        /* Lenis Smooth Scroll Setup */
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+
+        /* Typography */
+        .title-giant {
+            font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+            line-height: .95;
+            letter-spacing: -0.05em;
+        }
+
+        .title-serif {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        .title-main {
+            font-family: 'Zilla Slab', serif;
+            font-weight: 700;
+        }
+
+        /* Letter-by-letter scroll coloring target classes */
+        .reveal-char {
+            color: #d4d4d8; /* Initial muted grey */
+            transition: color 0.1s ease;
+        }
+
+        /* Device Canvas Container fixed in center during scroll journey */
+        .devices-stage {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* LAPTOP CONTAINER */
+        .laptop-wrapper {
+            position: absolute;
+            width: 80vw;
+            max-width: 900px;
+            aspect-ratio: 16 / 10;
+            transform-style: preserve-3d;
+            will-change: transform, opacity;
+            opacity: 0;
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .laptop-wrapper:hover {
+            transform: scale(1.02) rotateY(-5deg) rotateX(2deg);
+        }
+
+        /* TABLET CONTAINER */
+        .tablet-wrapper {
+            position: absolute;
+            width: 480px;
+            height: 350px;
+            transform-style: preserve-3d;
+            will-change: transform, opacity;
+            opacity: 0;
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .tablet-wrapper:hover {
+            transform: scale(1.03) rotateY(5deg);
+        }
+
+        /* PHONE CONTAINER */
+        .phone-wrapper {
+            position: absolute;
+            width: 260px;
+            height: 480px;
+            transform-style: preserve-3d;
+            will-change: transform, opacity;
+            opacity: 0;
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .phone-wrapper:hover {
+            transform: scale(1.05) rotateZ(-2deg);
+        }
+
+        /* Structural spacers */
+        .scroll-section {
+            min-height: 100vh;
+            width: 100vw;
+            position: relative;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+        }
+    </style>    
+</head>
+<body class="bg-paper text-ink antialiased">
+
+    <div class="fixed inset-0 pointer-events-none opacity-[0.015] z-50 bg-repeat bg-center" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.85\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E');"></div>
+
+    <div class="devices-stage">
+        
+        <div class="laptop-wrapper" id="laptop-device">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/018/742/939/small/laptop-computer-with-blank-transparent-screen-and-background-format-png.png" alt="Laptop Image Asset" class="w-full h-full object-contain filter drop-shadow(0 15px 35px rgba(0,0,0,0.06))">
+        </div>
+
+        <div class="tablet-wrapper" id="tablet-device">
+            <img src="https://raw.githubusercontent.com/bdlfateh15-maker/portfolio/refs/heads/main/images-removebg-preview.png" alt="Tablet Image Asset" class="w-full h-full object-contain filter drop-shadow(0 20px 45px rgba(0,0,0,0.07))">
+        </div>
+
+        <div class="phone-wrapper" id="phone-device">
+            <img src="https://raw.githubusercontent.com/bdlfateh15-maker/portfolio/refs/heads/main/360_F_535891750_ISRZFyMQHxARc6rqRtESODC3zgIBX9Ec-removebg-preview.png" alt="Phone Image Asset" class="w-full h-full object-contain filter drop-shadow(0 25px 50px rgba(0,0,0,0.09))">
+        </div>
+
+    </div>
+
+    <main class="relative z-20">
+
+        <section 
+            class="scroll-section flex-col justify-center px-6 text-center pt-32" 
+            id="scene-hero" 
+            style="background: radial-gradient(circle, rgba(245,245,245,1) 0%, rgba(230,230,230,1) 100%);"
+        >
+            <div class="max-w-5xl mx-auto flex flex-col items-center">
+                <span class="text-xs uppercase font-extrabold tracking-[0.25em] text-accent mb-6">Automate & Convert</span>
+                <h1 class="title-giant title-main font-extrabold text-ink leading-none tracking-tight mb-8">
+                    Meet <span class="title-main text-accent font-medium">ConverYou</span>.
+                </h1>
+                <p class="text-lg md:text-xl text-neutral-500 max-w-2xl font-normal leading-relaxed mb-12">
+                    An intelligent bot platform with an integrated CRM to automate conversations and manage leads seamlessly across all your channels.
+                </p>
+            </div>
+        </section>
+
+        <section class="scroll-section px-6 md:px-24" id="scene-laptop">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12">
+                <div class="md:col-span-5 flex flex-col justify-center py-20">
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-accent uppercase mb-4">Platform 01 // The Dashboard</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight transition-heading" id="reveal-text-1">
+                        A unified dashboard to build, manage, and analyze your bots.
+                    </h2>
+                    <p class="text-md text-neutral-500 leading-relaxed mb-8 max-w-sm">
+                        Create powerful conversational flows with our intuitive drag-and-drop builder. No code required.
+                    </p>
+                </div>
+            </div>
+        </section>
+ 
+        <section class="scroll-section px-6 md:px-24" id="scene-tablet">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12">
+                <div class="md:col-span-5 md:col-start-8 flex flex-col justify-center py-20">
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-accent uppercase mb-4">Platform 02 // Integrated CRM</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight transition-heading" id="reveal-text-2">
+                        Turn conversations into conversions with our built-in CRM.
+                    </h2>
+                    <p class="text-md text-neutral-500 leading-relaxed mb-8 max-w-sm">
+                        Track user interactions, manage leads, and view customer history without ever leaving the platform.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-section px-6 md:px-24" id="scene-phone">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12">
+                <div class="md:col-span-5 flex flex-col justify-center py-20">
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-accent uppercase mb-4">Platform 03 // Mobile Access</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight transition-heading" id="reveal-text-3">
+                        Manage your business from anywhere, on any device.
+                    </h2>
+                    <p class="text-md text-neutral-500 leading-relaxed mb-8 max-w-sm">
+                        Our fully responsive interface lets you reply to customers, check analytics, and manage your bots on the go.
+                    </p>
+                </div>
+            </div>
+        </section>
+ 
+        <section class="h-[100vh] flex flex-col items-center justify-center text-center relative z-20 px-6" id="scene-outro">
+            <span class="text-xs uppercase font-extrabold tracking-[0.25em] text-neutral-400 mb-6">Begin Your Project</span>
+            <h2 class="text-4xl md:text-7xl font-extrabold tracking-tight mb-10 leading-none">
+                Bring design <span class="title-main text-accent font-medium">alive</span>.
+            </h2>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button class="px-8 py-4 bg-ink text-white font-extrabold text-xs tracking-widest uppercase hover:bg-accent transition-colors duration-300 rounded-none shadow-xl opacity-0" id="cta-btn-1">Start Free Trial</button>
+                <button class="px-8 py-4 bg-transparent border border-neutral-300 text-ink font-extrabold text-xs tracking-widest uppercase hover:border-ink transition-colors duration-300 rounded-none opacity-0" id="cta-btn-2">Request a Demo</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const lenis = new Lenis({
+            duration: 1.3,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -11 * t)), 
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+        gsap.ticker.lagSmoothing(0);
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        function setupInkBleedText(elementId) {
+            const heading = document.getElementById(elementId);
+            if (!heading) return;
+            
+            const words = heading.innerText.split(' ');
+            heading.innerHTML = '';
+            
+            words.forEach((word) => {
+                const wordSpan = document.createElement('span');
+                wordSpan.style.display = 'inline-block';
+                wordSpan.className = 'mr-2 whitespace-nowrap';
+                
+                word.split('').forEach((char) => {
+                    const charSpan = document.createElement('span');
+                    charSpan.className = 'reveal-char';
+                    charSpan.innerText = char;
+                    wordSpan.appendChild(charSpan);
+                });
+                
+                heading.appendChild(wordSpan);
+            });
+        }
+
+        setupInkBleedText('reveal-text-1');
+        setupInkBleedText('reveal-text-2');
+        setupInkBleedText('reveal-text-3');
+
+        const masterTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "main",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1.2
+            }
+        });
+
+        // initial state
+        gsap.set("#laptop-device", { scale: 0.4, opacity: 1, y: '25vh', rotationX: 10, transformPerspective: 1000 });
+        gsap.set("#tablet-device", { scale: 0.7, opacity: 0, y: 250, rotationY: -25, transformPerspective: 1000 });
+        gsap.set("#phone-device", { scale: 0.6, opacity: 0, y: 300, rotationZ: 20, transformPerspective: 1000 });
+ 
+        /* --- STAGE 1: Laptop Journey --- */
+        masterTl
+            .to("#laptop-device", {
+                scale: 0.95,
+                y: 0,
+                rotationX: 0,
+                ease: "power1.inOut"
+            }, "introZoom")
+            .to("#scene-hero", {
+                opacity: 0,
+                ease: "power1.inOut"
+            }, "introZoom")
+            .to("#laptop-device", {
+                ease: "power2.out"
+            }, "heroToLaptop")
+            .to("#laptop-device", {
+                x: '20vw',
+                y: '-2vh',
+                scale: 0.7,
+                rotationY: -25,
+                rotationX: 8,
+                ease: "power2.inOut"
+            }, "laptopFocus")
+
+        /* --- STAGE 2: Tablet Entrance & Laptop Retreat --- */
+            .to("#laptop-device", {
+                x: '-20vw',
+                y: '-100vh',
+                scale: 0.5,
+                opacity: 0,
+                rotationY: -60,
+                ease: "power2.in"
+            }, "laptopToTablet")
+            .to("#tablet-device", {
+                opacity: 1,
+                scale: 1,
+                x: '-25vw',
+                y: '0vh',
+                rotationY: 20,
+                rotationX: -5,
+                ease: "power2.out"
+            }, "laptopToTablet")
+
+        /* --- STAGE 3: Phone Entrance & Tablet Retreat --- */
+            .to("#tablet-device", {
+                x: '30vw',
+                y: '100vh',
+                scale: 0.6,
+                opacity: 0,
+                rotationY: 55,
+                ease: "power2.in"
+            }, "tabletToPhone")
+            .to("#phone-device", {
+                opacity: 1,
+                scale: 1,
+                x: '22vw',
+                y: '2vh',
+                rotationZ: -8,
+                rotationY: -15,
+                ease: "power2.out"
+            }, "tabletToPhone")
+
+        /* --- STAGE 4: Final Scene Outro Retreat --- */
+            .to("#phone-device", {
+                scale: 0.3,
+                opacity: 0,
+                y: '-100vh',
+                rotationZ: -30,
+                ease: "power2.in"
+            }, "phoneToOutro");
+
+        function registerInkBleedTrigger(sectionId, elementId) {
+            const charSpans = document.querySelectorAll(`#${elementId} .reveal-char`);
+            if (charSpans.length === 0) return;
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: `#${sectionId}`,
+                    start: "top 75%",
+                    end: "top 25%",
+                    scrub: true
+                }
+            }).to(charSpans, {
+                color: "#09090b",
+                stagger: 0.05,
+                ease: "none"
+            });
+        }
+
+        registerInkBleedTrigger('scene-laptop', 'reveal-text-1');
+        registerInkBleedTrigger('scene-tablet', 'reveal-text-2');
+        registerInkBleedTrigger('scene-phone', 'reveal-text-3');
+        
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: '#scene-outro',
+                start: 'top 80%',
+                toggleActions: 'play none none none'
+            }
+        })
+        .to(['#cta-btn-1', '#cta-btn-2'], {
+            opacity: 1,
+            y: 0,
+            stagger: 0.1,
+            duration: 0.8,
+            ease: 'power3.out'
+        });
+    </script>
+</body>
+</html>
