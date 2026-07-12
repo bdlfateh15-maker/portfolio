@@ -48,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function setTestimonialsHeight() {
     if (testimonialsSection && testimonialsTrack && window.innerWidth > 768) {
       const trackWidth = testimonialsTrack.scrollWidth;
-      testimonialsSection.style.height = `${trackWidth}px`;
+      const extraSpace = window.innerHeight; // Adjust this value for more/less space
+      testimonialsSection.style.height = `${trackWidth - window.innerWidth + extraSpace}px`;
     }
   }
 
@@ -136,6 +137,23 @@ document.addEventListener('DOMContentLoaded', () => {
     testimonialsTrack.addEventListener('touchmove', doDrag, { passive: false });
   }
 
+  function initCookieBanner() {
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('cookie-accept-btn');
+    const declineBtn = document.getElementById('cookie-decline-btn');
+    if (!banner) return;
+
+    if (!localStorage.getItem('cookies_accepted')) {
+      banner.classList.add('show');
+    }
+    const hideBanner = () => banner.classList.remove('show');
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookies_accepted', 'true');
+      hideBanner();
+    });
+    declineBtn.addEventListener('click', hideBanner);
+  }
+
   function initRadialMenu() {
     const menu = document.getElementById('radial-menu');
     const toggle = document.getElementById('radial-menu-toggle');
@@ -173,13 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contact-form');
     if (!form) return;
 
-    const successMessageContainer = document.getElementById('success-message');
-    const sendAnotherBtn = document.getElementById('send-another-btn');
-    form.setAttribute('action', 'https://formsubmit.co/el/wikisa');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const submitButton = form.querySelector('.btn-submit');
+    async function handleSubmit(event) {
+      event.preventDefault();
       const statusMessage = form.querySelector('.form-status');
       let isValid = true;
 
@@ -206,45 +219,49 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (isValid) {
+        const submitButton = form.querySelector('.btn-submit');
         submitButton.disabled = true;
         submitButton.textContent = 'Sending...';
+        statusMessage.textContent = '';
 
-        fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        }).then(response => {
+        const data = new FormData(event.target);
+        try {
+          const response = await fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
           if (response.ok) {
-            form.style.display = 'none';
-            successMessageContainer.style.display = 'block';
+            statusMessage.textContent = "Thanks for your submission!";
+            statusMessage.style.color = 'green';
+            form.reset();
           } else {
-            throw new Error('Submission failed.');
+            const responseData = await response.json();
+            if (Object.hasOwn(responseData, 'errors')) {
+              statusMessage.textContent = responseData["errors"].map(error => error["message"]).join(", ");
+            } else {
+              statusMessage.textContent = "Oops! There was a problem submitting your form";
+            }
+            statusMessage.style.color = '#ef4444';
           }
-        }).catch(error => {
-          statusMessage.textContent = `An error occurred: ${error.message}`;
+        } catch (error) {
+          statusMessage.textContent = "Oops! There was a problem submitting your form";
           statusMessage.style.color = '#ef4444';
+        } finally {
           submitButton.disabled = false;
           submitButton.textContent = 'Send Message';
-        });
+        }
       } else {
         statusMessage.textContent = 'Please correct the errors above.';
         statusMessage.style.color = '#ef4444';
       }
-    });
+    }
+    form.addEventListener('submit', handleSubmit);
 
     function showError(input, message) {
       input.classList.add('invalid');
       input.nextElementSibling.textContent = message;
-    }
-
-    if (sendAnotherBtn) {
-      sendAnotherBtn.addEventListener('click', () => {
-        successMessageContainer.style.display = 'none';
-        form.style.display = 'flex';
-        form.reset();
-        form.querySelector('.btn-submit').disabled = false;
-        form.querySelector('.btn-submit').textContent = 'Send Message';
-      });
     }
   }
 
@@ -270,6 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarObserver();
   initProjectFiltering();
   initDraggableTestimonials();
+  initCookieBanner();
   initRadialMenu();
   initServicesAccordion();
   initContactForm();
